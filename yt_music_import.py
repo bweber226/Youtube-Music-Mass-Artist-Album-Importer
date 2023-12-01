@@ -38,7 +38,7 @@ with open("music.csv", encoding="utf8") as csvfile:
             # Add the artist if it hasn't been added
             if not added_artist:
                 try:
-                    ytmusic.subscribe_artists([yt_artist["channelId"]])
+                    ytmusic.unsubscribe_artists([yt_artist["channelId"]])
                     print(f"Added {artist}.")
                     added_artist = True
                 except:
